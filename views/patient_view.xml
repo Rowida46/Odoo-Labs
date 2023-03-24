@@ -27,12 +27,14 @@
                         <group string="medical info">
 
                             <field name="blood_type"/>
-                            <field name="cr_ratio"/>
+                            <field name="pcr"/>
+                            <field name="doctor" widget="many2many_tags" attrs="{'readonly':[('department_id','=',False)]}"/>
+                            <field name="cr_ratio" attrs="{'required': [('pcr','=',True)]}"/>
                         </group>
                         <group string="gender selection">
 
                             <field name="gender"/>
-                            <field name="departemnt_id"/>
+                            <field name="departemnt_id" domain ="[('is_opened', '=', True)]"/>
                         </group>
 
                         <group string="extra info">
@@ -43,9 +45,13 @@
                         </group>
                         <notebook>
                             <page string="details">
-                                <field name="history"/>
+                                <field name="history" attrs="{'invisible':[('age','&lt;',50)]}"/>
+                            </page>
+                            <page string="Log History">
+                                <field name="log_id"/>
                             </page>
                         </notebook>
+
 
                     </sheet>
                 </form>

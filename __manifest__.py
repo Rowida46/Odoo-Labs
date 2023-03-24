@@ -23,6 +23,7 @@
     'data': [
         'views/patient_view.xml',
         'views/departments_view.xml'
+        'views/doctor_views.xml'
 
     ]
 }

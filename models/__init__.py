@@ -1,1 +1,1 @@
-from . import patient, doctors, department
+from . import patient, doctors, department, logs
