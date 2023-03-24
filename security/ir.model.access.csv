@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hsa_user_access_patient ,hsa user access patient ,model_hsa_patient ,hsa.hsa_user_group ,1,1,1,0
+hsa_user_access_log_history ,hsa manager access log history ,model_hsa_loghistory ,hsa.hsa_user_group ,1,0,0,0
+hsa_manager_access_patient ,hsa manager access patient ,model_hsa_patient ,hsa.hsa_manager_group ,1,1,1,1
+hsa_user_access_department ,hsa user access department ,model_hsa_department ,hsa.hsa_user_group ,1,0,0,0
+hsa_manager_access_department ,hsa manager access department ,model_hsa_department ,hsa.hsa_manager_group ,1,1,1,1
+hsa_manager_access_doctors ,hsa manager access doctors ,model_hsa_doctor ,hsa.hsa_manager_group ,1,1,1,1
+hsa_manager_access_log_history ,hsa manager access log history ,model_hsa_loghistory ,hsa.hsa_manager_group ,1,1,1,1
+hsa_user_access_doctors ,hsa user access doctors ,model_hsa_doctor ,hsa.hsa_user_group ,1,0,0,0
