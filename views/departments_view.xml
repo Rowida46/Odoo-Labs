@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+
+        <record id ='hma_department_action' model="ir.actions.act_window">
+            <field name="name">departments</field>
+            <field name="res_model">hsa.department</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+        <menuitem id ='hma_department_root_menu' name="hma department" />
+        <menuitem id ='hma_department_menu' name="departments" parent="hma_department_root_menu" action="hma_department_action"/>
+
+    </data>
+
+
+</odoo>

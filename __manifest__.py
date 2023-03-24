@@ -21,6 +21,8 @@
     'name': 'Hsa Managment',
     'version': '1.0.0',
     'data': [
-        'views/patient_view.xml'
+        'views/patient_view.xml',
+        'views/departments_view.xml'
+
     ]
 }

@@ -2,50 +2,75 @@
     <data>
 
         <record id ='hma_action_form_view' model="ir.ui.view">
-            <field name="name">Students</field>
+            <field name="name">Patients</field>
             <field name="model">hsa.patient</field>
             <field name='arch' type="xml">
                 <form>
                     <sheet>
-                            <group string="user name">
-                                <group>
-                                    <field name="first_name"/>
-                                </group>
-                                <group>
-
-                                    <field name="last_name"/>
-                                </group>
-                                <group>
-                                    <field name="birth_date"/>
-                                    <field name="history"/>
-                                </group>
+                        <h3 class="text-center display-6">Fill in your data info</h3>
+                        <group string="user name">
+                            <group>
+                                <field name="first_name"/>
+                            </group>
+                            <group>
+                                <field name="last_name"/>
+                            </group>
+                            <group>
+                                <field name="birth_date"/>
+                            </group>
+                            <group>
+                                <field name="gender"/>
                             </group>
 
-                            <group string="medical info">
+                        </group>
 
-                                <field name="blood_type"/>
-                                <field name="cr_ratio"/>
-                            </group>
+                        <group string="medical info">
 
-                            <group string="extra info">
+                            <field name="blood_type"/>
+                            <field name="cr_ratio"/>
+                        </group>
+                        <group string="gender selection">
 
-                                <field name="image"/>
-                                <field name="age"/>
-                                <field name="address"/>
-                            </group>
+                            <field name="gender"/>
+                            <field name="departemnt_id"/>
+                        </group>
+
+                        <group string="extra info">
+
+                            <field name="image"/>
+                            <field name="age"/>
+                            <field name="address"/>
+                        </group>
+                        <notebook>
+                            <page string="details">
+                                <field name="history"/>
+                            </page>
+                        </notebook>
 
                     </sheet>
                 </form>
             </field>
         </record>
+        <record id ='hma_action_tree_view' model="ir.ui.view">
+            <field name="name">Students</field>
+            <field name="model">hsa.patient</field>
+            <field name='arch' type="xml">
+                <tree>
+                    <field name="first_name"/>
+                    <field name="blood_type"/>
+
+                </tree>
+            </field>
+        </record>
+
         <record id ='hma_action' model="ir.actions.act_window">
 
-            <field name="name">Students</field>
+            <field name="name">Patient</field>
             <field name="res_model">hsa.patient</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem id ='iti_hma_root_menu' name="hms" />
 
+        <menuitem id ='iti_hma_root_menu' name="hms" />
         <menuitem id ='iti_hma_menu' name="students" parent="iti_hma_root_menu" action="hma_action"/>
 
     </data>

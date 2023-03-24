@@ -1,8 +1,4 @@
-from odoo import models, fields, api
-
-import re
-from odoo.exceptions import ValidationError
-from odoo.exceptions import UserError
+from odoo import models, fields
 
 
 class patient(models.Model):
@@ -21,3 +17,9 @@ class patient(models.Model):
     image = fields.Image()
     age = fields.Integer(required=True)
     address = fields.Text()
+    gender = fields.Selection(selection=[
+        ("Femal", "female"),
+        ("Male", "male")
+
+    ])
+    departemnt_id = fields.Many2one('hsa.department')
